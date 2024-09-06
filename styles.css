@@ -1,5 +1,112 @@
-html, body {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #EDEDED;
+    padding-top: 60px; 
 }
 
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #C6C6C6;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+.logo img {
+    height: 30px;
+}
+
+.icons {
+    width: 24px;
+    margin-right: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.liked {
+    filter: hue-rotate(-60deg) saturate(300%); 
+    background-color: red;
+}
+
+.user-account {
+    display: flex;
+    align-items: center;
+}
+
+.user-account .username {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.user-account .user-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+/* Post Styles */
+.post {
+    background-color: white;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    width: 400px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-header img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-info .name {
+    font-weight: bold;
+}
+
+.post-image {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.post-footer {
+    margin-top: 10px;
+}
+
+.post-footer .icons {
+    width: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.likes {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.comment {
+    margin-top: 5px;
+}
+
+.comments-section {
+    margin-top: 10px;
+}
