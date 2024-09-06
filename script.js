@@ -10,6 +10,7 @@ const posts = [
         liked: false,
         comments: []
     },
+
     {
         name: "Gustave Courbet",
         username: "gus1819",
@@ -21,6 +22,7 @@ const posts = [
         liked: false,
         comments: []
     },
+
     {
         name: "Joseph Ducreux",
         username: "jd1735",
@@ -35,23 +37,23 @@ const posts = [
 ];
 
 // Function to generate HTML for each post
-function createPost(post, index) {
+function createPost(posts, index) {
     return `
         <div class="post">
             <div class="post-header">
-                <img src="${post.avatar}" alt="${post.name}">
+                <img src="${posts.avatar}" alt="${posts.name}">
                 <div class="post-info">
-                    <span class="name">${post.name}</span>
-                    <span class="location">${post.location}</span>
+                    <span class="name">${posts.name}</span>
+                    <span class="location">${posts.location}</span>
                 </div>
             </div>
-            <img src="${post.post}" alt="Post by ${post.name}" class="post-image">
+            <img src="${posts.post}" alt="Post by ${posts.name}" class="post-image">
             <div class="post-footer">
-                <img src="/images/icon-heart.png" class="icons ${post.liked ? 'liked' : ''}" id="like-icon-${index}" onclick="likePost(${index})">
+                <img src="/images/icon-heart.png" class="icons ${posts.liked ? 'liked' : ''}" id="like-icon-${index}" onclick="likePost(${index})">
                 <img src="/images/icon-dm.png" class="icons">
                 <img src="/images/icon-comment.png" class="icons" onclick="addComment(${index})">
-                <br /><span id="likes-${index}" class="likes">${post.likes} likes</span>
-                <p class="comment"><strong>@${post.username}</strong> ${post.comment}</p>
+                <br /><span id="likes-${index}" class="likes">${posts.likes} likes</span>
+                <p class="comment"><strong>@${posts.username}</strong> ${posts.comment}</p>
                 <div id="comments-${index}" class="comments-section"></div>
             </div>
         </div>
