@@ -72,7 +72,7 @@ function likePost(index) {
     const post = posts[index];
     post.liked = !post.liked; // Toggle liked status
     post.likes += post.liked ? 1 : -1; // Increment or decrement likes
-
+    
     // Update the likes count in the UI
     const likesElement = document.getElementById(`likes-${index}`);
     likesElement.innerText = `${post.likes} likes`;
